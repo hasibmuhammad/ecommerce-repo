@@ -11,11 +11,11 @@ class HomeController extends Controller
 {
     public function getIndex()
     {
-        $this->view('home');
+        view('home');
     }
     public function getRegister()
     {
-        $this->view('register');
+        view('register');
     }
     public function postRegister()
     {
@@ -101,7 +101,7 @@ class HomeController extends Controller
     }
     public function getLogin()
     {
-        $this->view('login');
+        view('login');
     }
 
     public function postLogin()
