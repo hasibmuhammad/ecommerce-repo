@@ -13,3 +13,11 @@ if (!function_exists('partialView')) {
         require_once __DIR__ . "/../views/partials/{$view}.php";
     }
 }
+
+if (!function_exists('redirect')) {
+    function redirect($location = '/')
+    {
+        header("Location: {$location}");
+        exit();
+    }
+}
