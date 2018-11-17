@@ -12,8 +12,8 @@ $router->filter('auth', function () {
 });
 
 $router->controller('/', App\Controllers\Frontend\HomeController::class);
-$router->controller('/users', App\Controllers\Frontend\UsersController::class);
 
 $router->group(['before' => 'auth'], function (RouteCollector $router) {
+    $router->controller('/users', App\Controllers\Frontend\UsersController::class);
     $router->controller('/dashboard', App\Controllers\Backend\DashboardController::class);
 });
